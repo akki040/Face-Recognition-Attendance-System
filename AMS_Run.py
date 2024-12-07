@@ -8,6 +8,7 @@ from PIL import Image, ImageTk
 import pandas as pd
 import datetime
 import time
+import pymysql # type: ignore
 
 # Window is our Main frame of system
 window = tk.Tk()
@@ -57,7 +58,7 @@ def manually_fill():
         DB_table_name = str(subb + "_" + Date + "_Time_" +
                             Hour + "_" + Minute + "_" + Second)
 
-        import pymysql.connections
+        
 
         # Connect to the database
         try:
@@ -441,7 +442,7 @@ def subjectchoose():
                     ts).strftime('%Y_%m_%d')
                 DB_Table_name = str(
                     Subject + "_" + date_for_DB + "_Time_" + Hour + "_" + Minute + "_" + Second)
-                import pymysql.connections
+                
 
                 # Connect to the database
                 try:
