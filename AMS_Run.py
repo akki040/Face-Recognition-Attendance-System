@@ -58,8 +58,7 @@ def manually_fill():
         DB_table_name = str(subb + "_" + Date + "_Time_" +
                             Hour + "_" + Minute + "_" + Second)
 
-        
-
+    
         # Connect to the database
         try:
             global cursor
